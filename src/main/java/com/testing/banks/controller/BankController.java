@@ -22,7 +22,7 @@ public class BankController {
     private BankService bankService;
 
     @GetMapping("/**")
-    public void getStatistics() throws IOException {
+    public void initBanks() throws IOException {
 
         List<Bank> banks = bankService.getBanks();
         bankService.storeBanks(banks);
